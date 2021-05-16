@@ -1,3 +1,5 @@
+
+
 Guide to Running the WEB Application
 
 Resources Required : Tomcat Server, Netbeans IDE, Java 8, MySQL, MySQL Workbench
