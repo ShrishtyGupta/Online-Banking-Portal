@@ -23,4 +23,4 @@ Below the Menu Bar, change the browser to Mozilla aor Chrome or any other web br
 STEP 5:
 Right click on icinbank Project in Netbeans and click build with dependencies. Then after build gets completed click on Run, make sure to select deployment server as Tomcat.
 If you want to access the admin portal then you will have to create an entry in user table for admin with user type as admin. 
-For normal customer users, entries can be made through the registration page in web portal itself. 
+For normal customer users, entries can be made through the registration page in web portal Registration Page.
