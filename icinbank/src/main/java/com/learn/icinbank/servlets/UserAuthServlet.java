@@ -19,7 +19,7 @@ import org.hibernate.query.Query;
 
 /**
  *
- * @author hp
+ * @author shrishty
  */
 public class UserAuthServlet extends HttpServlet {
 

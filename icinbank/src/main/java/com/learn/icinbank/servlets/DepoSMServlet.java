@@ -19,7 +19,7 @@ import org.hibernate.query.Query;
 
 /**
  *
- * @author hp
+ * @author SHRISHTY
  */
 public class DepoSMServlet extends HttpServlet {
 

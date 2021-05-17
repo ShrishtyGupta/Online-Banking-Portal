@@ -19,7 +19,7 @@ import org.hibernate.query.Query;
 
 /**
  *
- * @author hp
+ * @author shrishty
  */
 public class SaveAuthServlet extends HttpServlet {
 
@@ -42,9 +42,9 @@ public class SaveAuthServlet extends HttpServlet {
                                 int sacc_status =  Integer.parseInt(request.getParameter("sacc_status"));
                                
                 // validations
-
-                           
-                   Session s = FactoryProvider.getFactory().openSession();
+if(sacct_user_id==sacc_id)
+{
+Session s = FactoryProvider.getFactory().openSession();
                 Transaction tx = s.beginTransaction(); 
                 Query q=s.createQuery("update SaveAcc set saccStatus=:p where saccId=:i");
                 
@@ -56,13 +56,20 @@ public class SaveAuthServlet extends HttpServlet {
                
              
                
-                HttpSession httpSession = request.getSession();
-               
- httpSession.setAttribute("message", "Status Updated Succcessfully!"  );    
-              
-                response.sendRedirect("saveauth.jsp");
+            
                
                 return;
+}
+                         
+else
+{
+    HttpSession httpSession = request.getSession();
+               
+ httpSession.setAttribute("message", "Invalid User ID and Account ID combination!"  );    
+              
+                response.sendRedirect("saveauth.jsp");
+}
+                   
                 
                 
             } catch (Exception e) {

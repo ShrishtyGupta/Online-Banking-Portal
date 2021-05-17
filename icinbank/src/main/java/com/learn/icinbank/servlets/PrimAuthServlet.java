@@ -4,11 +4,9 @@
  * and open the template in the editor.
  */
 package com.learn.icinbank.servlets;
-
+import java.util.List;
 import com.learn.icinbank.dao.PrimAccDao;
-import com.learn.icinbank.dao.UserDao;
 import com.learn.icinbank.entities.PrimAcc;
-import com.learn.icinbank.entities.User;
 import com.learn.icinbank.helper.FactoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -23,7 +21,7 @@ import org.hibernate.query.Query;
 
 /**
  *
- * @author hp
+ * @author shrishty
  */
 public class PrimAuthServlet extends HttpServlet {
 
@@ -47,7 +45,11 @@ public class PrimAuthServlet extends HttpServlet {
                                
                 // validations
 
-                           
+                     PrimAccDao dao=new PrimAccDao(FactoryProvider.getFactory());
+                     List<PrimAcc> list = dao.getPrimAcc();      
+                     
+                     if(pacct_user_id==pacc_id)
+                     {
                    Session s = FactoryProvider.getFactory().openSession();
                 Transaction tx = s.beginTransaction(); 
                 Query q=s.createQuery("update PrimAcc set paccStatus=:p where paccId=:i");
@@ -66,7 +68,16 @@ public class PrimAuthServlet extends HttpServlet {
               
                 response.sendRedirect("primauth.jsp");
                
-                return;
+                return;}
+                     else
+                     {
+                     HttpSession httpSession = request.getSession();
+               
+ httpSession.setAttribute("message", "Wrong combination of user and account ID!"  );    
+              
+                response.sendRedirect("primauth.jsp");
+                     }
+                         
                 
                 
             } catch (Exception e) {

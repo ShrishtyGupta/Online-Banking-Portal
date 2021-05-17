@@ -1,29 +1,9 @@
 package com.learn.icinbank.servlets;
 
-import com.learn.icinbank.dao.UserDao;
-import com.learn.icinbank.dao.PrimAccDao;
-import com.learn.icinbank.entities.Cheq;
-import com.learn.icinbank.entities.User;
-import com.learn.icinbank.helper.FactoryProvider;
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
-import java.util.List;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+
 import org.hibernate.query.Query;
-import com.learn.icinbank.entities.PrimAcc;
-import com.learn.icinbank.entities.Trans;
 import com.learn.icinbank.helper.FactoryProvider;
-import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

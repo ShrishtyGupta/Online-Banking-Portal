@@ -23,7 +23,7 @@ import org.hibernate.query.Query;
 
 /**
  *
- * @author hp
+ * @author shrishty
  */
 public class ReqMServlet extends HttpServlet {
 
