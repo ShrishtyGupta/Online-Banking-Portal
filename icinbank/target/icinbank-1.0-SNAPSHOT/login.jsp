@@ -1,8 +1,4 @@
-<%-- 
-    Document   : login.jsp
-    Created on : May 9, 2021, 2:51:20 AM
-    Author     : hp
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -31,13 +27,13 @@
                             <%@include file="message.jsp" %>
                             <form action="LoginServlet" method="post">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input  name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <label for="exampleInputEmail1" >Email address</label>
+                                    <input  name="email" required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input  name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <input  name="password" type="password" required class="form-control" id="exampleInputPassword1" placeholder="Password">
                                 </div>
                                 <a href="register.jsp" class="text-center d-block mb-2" style="color:#0b2239"> If You Are A New User Click Me </a>
                                 <div class="container text-center"> 

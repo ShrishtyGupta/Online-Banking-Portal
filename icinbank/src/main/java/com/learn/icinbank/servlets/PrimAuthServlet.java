@@ -48,9 +48,16 @@ public class PrimAuthServlet extends HttpServlet {
                      PrimAccDao dao=new PrimAccDao(FactoryProvider.getFactory());
                      List<PrimAcc> list = dao.getPrimAcc();      
                      
-                     if(pacct_user_id==pacc_id)
+                     if(pacct_user_id!=pacc_id)
                      {
-                   Session s = FactoryProvider.getFactory().openSession();
+                         HttpSession httpSession = request.getSession();
+ httpSession.setAttribute("message", "Wrong combination of user and account ID!"  );          
+                response.sendRedirect("primauth.jsp");
+                  }
+                     else
+                     {
+                         
+                       Session s = FactoryProvider.getFactory().openSession();
                 Transaction tx = s.beginTransaction(); 
                 Query q=s.createQuery("update PrimAcc set paccStatus=:p where paccId=:i");
                 
@@ -68,14 +75,9 @@ public class PrimAuthServlet extends HttpServlet {
               
                 response.sendRedirect("primauth.jsp");
                
-                return;}
-                     else
-                     {
-                     HttpSession httpSession = request.getSession();
-               
- httpSession.setAttribute("message", "Wrong combination of user and account ID!"  );    
-              
-                response.sendRedirect("primauth.jsp");
+                return;   
+                         
+                     
                      }
                          
                 

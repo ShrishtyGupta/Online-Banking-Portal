@@ -60,7 +60,7 @@
         <div class="form-group">
         <h3 class="text-center mb-5">Update User Access</h3>
         <label for="user_id">User ID</label>
-        <input  name="user_id" type="text" class="form-control" id="user_id"  >
+        <input  name="user_id" type="text" class="form-control" id="user_id" required >
         <small id="emailHelp" class="form-text text-muted">Enter ID of User</small>
         </div>
                                 
@@ -156,5 +156,7 @@
                                             </div></div></div></div></div>
 
         </div><br><br>
+         <%@include file="components/footer_1.jsp" %>   
+
     </body>
 </html>

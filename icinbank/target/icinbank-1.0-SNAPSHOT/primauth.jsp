@@ -62,12 +62,12 @@
         <h3 class="text-center mb-5">Update Primary Account Access</h3>
         <%@include file="message.jsp" %>
         <label for="pacct_user_id">User ID</label>
-        <input  name="pacct_user_id" type="text" class="form-control" id="pacct_user_id"  >
+        <input  name="pacct_user_id" type="text" class="form-control" id="pacct_user_id" required >
         <small id="emailHelp" class="form-text text-muted">Enter ID of User</small>
         </div>
             <div>                         
 <label for="pacc_id">Primary Account ID</label>
-        <input  name="pacc_id" type="text" class="form-control" id="pacc_id"  >
+        <input  name="pacc_id" type="text" class="form-control" id="pacc_id"  required>
         <small id="emailHelp" class="form-text text-muted">Enter ID of Primary Account User</small><br>
         </div>
 
@@ -76,7 +76,7 @@
 
         <div class="form-group">
         <label for="pacc_status" >Update Status</label>
-        <select class="form-control" id="pacc_status" name="pacc_status">
+        <select class="form-control" id="pacc_status" name="pacc_status" required >
   <option value="1">1-Active</option>
   <option value="0">0-Blocked</option>
  
@@ -162,5 +162,6 @@
                                             </div></div></div></div></div>
 
         </div><br><br>
+         <%@include file="components/footer_1.jsp" %>   
     </body>
 </html>

@@ -80,7 +80,7 @@
         </div>
         <div class="form-group">
             <label for="pacc_balnew">Amount</label>
-            <input  name="pacc_balnew" type="text" class="form-control" id="pacc_balnew"  >
+            <input  name="pacc_balnew" type="text" class="form-control" id="pacc_balnew" required >
         </div>
         
         <div class="container text-center">

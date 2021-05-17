@@ -1,6 +1,26 @@
-
+<%@page import="com.learn.icinbank.entities.PrimAcc"%>
+<%@page import="com.learn.icinbank.entities.SaveAcc"%>
+<%@page import="java.util.List"%>
+<%@page import="com.learn.icinbank.entities.Trans"%>
+<%@page import="com.learn.icinbank.dao.UserDao"%>
+<%@page import="com.learn.icinbank.dao.PrimAccDao"%>
+<%@page import="com.learn.icinbank.dao.SaveAccDao"%>
+<%@page import="com.learn.icinbank.helper.FactoryProvider"%>
+<%@page import="com.learn.icinbank.entities.User"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+
+    User useru = (User) session.getAttribute("current-user");
+    if (useru == null) {
+
+        session.setAttribute("message", "You are not logged in !! Login first to access this page");
+        response.sendRedirect("login.jsp");
+        return;
+
+    }
+    
+    %>
 <!DOCTYPE html>
 <html>
     <head>

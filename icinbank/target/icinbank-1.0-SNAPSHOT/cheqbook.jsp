@@ -49,7 +49,7 @@
                                 <div class="form-group">
                                    <h3 class="text-center mb-5">Request a New Checkbook</h3>
                                     <label for="cheqt_user_id">User ID</label>
-                                    <input  name="cheqt_user_id" type="text" class="form-control" id="cheqt_user_id" value="<%=userc.getUserId()%>" readonly>
+                                    <input  name="cheqt_user_id" required type="text" class="form-control" id="cheqt_user_id" value="<%=userc.getUserId()%>" readonly>
                                     <small id="emailHelp" class="form-text text-muted">This is your unique ICIN user ID.</small>
                                 </div>
                                 
@@ -57,13 +57,13 @@
 
                                 <div class="form-group">
                                     <label for="cheq_connum">Your contact</label>
-                                    <input name ="cheq_connum" type="text" class="form-control" id="cheq_connum" value="<%=userc.getUserPhone()%>" readonly  >
+                                    <input name ="cheq_connum" type="text" class="form-control" id="cheq_connum" value="<%=userc.getUserPhone()%>" readonly required >
                                 </div>
 
 
                                 <div class="form-group">
                                     <label for="cheq_add" >Your shipping address</label>
-                                    <textarea name ="cheq_add" class="form-control" id="exampleFormControlTextarea1" placeholder="Enter your shipping address" rows="1"></textarea>
+                                    <textarea name ="cheq_add" class="form-control" id="exampleFormControlTextarea1" placeholder="Enter your shipping address" rows="1" required></textarea>
                                 </div>
 
                                 <div class="container text-center">

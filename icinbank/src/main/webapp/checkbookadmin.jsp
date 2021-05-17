@@ -61,7 +61,7 @@
         <div class="form-group">
         <h3 class="text-center mb-5">Approve Checkbook Requests</h3>
         <label for="cheqt_user_id">User ID</label>
-        <input  name="cheqt_user_id" type="text" class="form-control" id="cheqt_user_id"  >
+        <input  name="cheqt_user_id" type="text" class="form-control" id="cheqt_user_id"  required>
         <small id="emailHelp" class="form-text text-muted">Enter ID of User</small>
         </div>
                                 
@@ -69,14 +69,14 @@
 
         <div class="form-group">
         <label for="cheq_id">Checkbook ID</label>
-        <input name ="cheq_id" type="text" class="form-control" id="cheq_id"  >
+        <input name ="cheq_id" type="text" class="form-control" id="cheq_id"  required>
         <small id="emailHelp" class="form-text text-muted">Enter Checkbook ID</small>
         </div>
 
 
         <div class="form-group">
         <label for="cheq_status" >Update Status</label>
-        <select class="form-control" id="cheq_statuss" name="cheq_status">
+        <select class="form-control" id="cheq_statuss" name="cheq_status" required>
   <option value="1">1-Pending</option>
   <option value="2">2-Approved</option>
   <option value="3">3-Rejected</option>

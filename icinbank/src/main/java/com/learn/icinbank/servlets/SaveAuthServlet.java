@@ -54,7 +54,10 @@ Session s = FactoryProvider.getFactory().openSession();
                 tx.commit();
                 s.close();   
                
-             
+             HttpSession httpSession = request.getSession();
+               
+ httpSession.setAttribute("message", "Update is successful!"  );    
+                response.sendRedirect("saveauth.jsp");
                
             
                

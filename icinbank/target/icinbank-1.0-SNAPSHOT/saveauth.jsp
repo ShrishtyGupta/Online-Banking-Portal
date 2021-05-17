@@ -62,12 +62,12 @@
         <h3 class="text-center mb-5">Update Savings Account Access</h3>
         <%@include file="message.jsp" %>
         <label for="sacct_user_id">User ID</label>
-        <input  name="sacct_user_id" type="text" class="form-control" id="sacct_user_id"  >
+        <input  name="sacct_user_id" type="text" class="form-control" id="sacct_user_id" required >
         <small id="emailHelp" class="form-text text-muted">Enter ID of User</small>
         </div>
             <div>                         
 <label for="sacc_id">Savings Account ID</label>
-        <input  name="sacc_id" type="text" class="form-control" id="sacc_id"  >
+        <input  name="sacc_id" type="text" class="form-control" id="sacc_id" required  >
         <small id="emailHelp" class="form-text text-muted">Enter ID of Savings Account User</small><br>
         </div>
 
@@ -162,5 +162,6 @@
                                             </div></div></div></div></div>
 
         </div><br><br>
+         <%@include file="components/footer_1.jsp" %>   
     </body>
 </html>
