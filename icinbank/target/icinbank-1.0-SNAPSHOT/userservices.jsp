@@ -249,7 +249,7 @@
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="transtt_user_id">Your User ID</label>
-                                    <input  name="transt_user_id" type="text" class="form-control" id="transt_user_id" value="<%=useru.getUserId()%>"readonly>
+                                    <input  name="transt_user_id" type="text" class="form-control" id="transt_user_id" value="<%=useru.getUserId()%>" readonly>
                                     <small id="emailHelp" class="form-text text-muted">Do not change this ID.</small>
                                 </div><br>
                                 
@@ -258,7 +258,7 @@
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="trans_Amt">Transaction Amount</label>
-                                    <input  name="trans_Amt" type="text" class="form-control" id="trans_Amt" >
+                                    <input  name="trans_Amt" type="text" class="form-control" id="trans_Amt" required>
                                     <small id="emailHelp" class="form-text text-muted">Amount should be less than Primary Account Balance</small>
                                 </div><br>
                                 
@@ -271,7 +271,7 @@
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="trans_name">Beneficiary Name</label>
-                                    <input  name="trans_name" type="text" class="form-control" id="trans_name" >
+                                    <input  name="trans_name" type="text" class="form-control" id="trans_name" required >
                                     <small id="emailHelp" class="form-text text-muted">Recepient Name.</small>
                                 </div><br>
                                 
@@ -280,7 +280,7 @@
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="trans_ifsc">Beneficiary IFSC Code</label>
-                                    <input  name="trans_ifsc" type="text" class="form-control" id="trans_ifsc" >
+                                    <input  name="trans_ifsc" type="text" class="form-control" id="trans_ifsc" required>
                                     <small id="emailHelp" class="form-text text-muted">Currency Indian National Rupee</small>
                                 </div><br>
                                 
@@ -289,19 +289,17 @@
                                     
                                     
                                     
-                             <div class="row">
-                                
-                                
+                             <div class="row"> 
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="acc_toacc">Account Number</label>
-                                    <input  name="acc_toacc" type="text" class="form-control" id="acc_toacc" >
+                                    <input  name="acc_toacc" type="text" class="form-control" id="acc_toacc" required >
                                     <small id="emailHelp" class="form-text text-muted">Account Number of Recepient.</small>
                                 </div><br>
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="acc_tobank">Bank Name</label>
-                                    <input  name="acc_tobank" type="text" class="form-control" id="acc_tobank" >
+                                    <input  name="acc_tobank" type="text" class="form-control" id="acc_tobank" required>
                                     <small id="emailHelp" class="form-text text-muted">Bank Name of Recepient.</small>
                                 </div> <br><br> 
 

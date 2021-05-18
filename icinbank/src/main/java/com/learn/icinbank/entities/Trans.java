@@ -27,7 +27,7 @@ public class Trans {
     @Column(length = 100, name = "acc_tobank")
     private String accTobank;
      @Column(length = 100, name = "acc_toacc")
-    private String accToacc;
+    private int accToacc;
     @ManyToOne
     private User transt;
 
@@ -38,7 +38,11 @@ public class Trans {
      @Column(length = 100, name = "trans_ifsc")
     private String transIFSC;
 
-    public Trans(int transId, int transAmt, Date transDate, String accTobank, String accToacc, User transt, boolean transStatus, String transName, String transIFSC) {
+     
+     
+     
+     
+    public Trans(int transId, int transAmt, Date transDate, String accTobank, int accToacc, User transt, boolean transStatus, String transName, String transIFSC) {
         this.transId = transId;
         this.transAmt = transAmt;
         this.transDate = transDate;
@@ -53,7 +57,7 @@ public class Trans {
     public Trans() {
     }
 
-    public Trans(int transAmt, Date transDate, String accTobank, String accToacc, User transt, boolean transStatus, String transName, String transIFSC) {
+    public Trans(int transAmt, Date transDate, String accTobank, int accToacc, User transt, boolean transStatus, String transName, String transIFSC) {
         this.transAmt = transAmt;
         this.transDate = transDate;
         this.accTobank = accTobank;
@@ -112,11 +116,11 @@ public class Trans {
         this.accTobank = accTobank;
     }
 
-    public String getAccToacc() {
+    public int getAccToacc() {
         return accToacc;
     }
 
-    public void setAccToacc(String accToacc) {
+    public void setAccToacc(int accToacc) {
         this.accToacc = accToacc;
     }
 
@@ -136,10 +140,7 @@ public class Trans {
         this.transStatus = transStatus;
     }
 
-    @Override
-    public String toString() {
-        return "Trans{" + "transId=" + transId + ", transAmt=" + transAmt + ", transDate=" + transDate + ", accTobank=" + accTobank + ", accToacc=" + accToacc + ", transt=" + transt + ", transStatus=" + transStatus + ", transName=" + transName + ", transIFSC=" + transIFSC + '}';
-    }
+   
 
    
 

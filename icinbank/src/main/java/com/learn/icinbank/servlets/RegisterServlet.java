@@ -45,7 +45,7 @@ public class RegisterServlet extends HttpServlet {
                 Cheq cheqq = new Cheq(1, user, userAddress, userPhone); 
                 PrimAcc paccss = new PrimAcc(0,user,0);
                 SaveAcc saccss = new SaveAcc(0,user,0);
-                Trans transs = new Trans(0,date,"Acc. Activation","Acc. Activation",user,true,userName,"Acc. Activation" );
+                Trans transs = new Trans(0,date,"Acc. Activation",0 ,user,true,userName,"Acc. Activation" );
                 Session hibernateSession = FactoryProvider.getFactory().openSession();
                 Transaction tx = hibernateSession.beginTransaction();                
                 int userId = (int) hibernateSession.save(user);

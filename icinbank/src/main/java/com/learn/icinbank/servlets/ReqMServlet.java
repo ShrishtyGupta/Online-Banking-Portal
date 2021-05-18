@@ -9,6 +9,8 @@ import com.learn.icinbank.dao.ReqMDao;
 import com.learn.icinbank.dao.UserDao;
 import com.learn.icinbank.entities.Trans;
 import com.learn.icinbank.entities.User;
+import com.learn.icinbank.entities.PrimAcc;
+import java.util.List;
 import com.learn.icinbank.helper.FactoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -46,11 +48,14 @@ public class ReqMServlet extends HttpServlet {
             int pacc_status=Integer.parseInt(request.getParameter("pacc_status"));
                                 int transt_user_id = Integer.parseInt(request.getParameter("transt_user_id"));
                                int trans_Amt = Integer.parseInt(request.getParameter("trans_Amt"));
-                                String acc_toacc = request.getParameter("acc_toacc");
+                                int acc_toacc = Integer.parseInt(request.getParameter("acc_toacc"));
                                 String acc_tobank = request.getParameter("acc_tobank");
                                 String trans_name = request.getParameter("trans_name");
                                 String trans_ifsc = request.getParameter("trans_ifsc");
-                               int z=pacc_bal-trans_Amt;
+                                int z=pacc_bal-trans_Amt;
+                                       
+            
+                               
     
                 if(pacc_status==1){
                                 if(pacc_bal-trans_Amt<0){
@@ -116,10 +121,13 @@ public class ReqMServlet extends HttpServlet {
                 Session ss = FactoryProvider.getFactory().openSession();
                 Transaction tx = ss.beginTransaction(); 
                 Query q=ss.createQuery("update PrimAcc set paccBal=:p where paccId=:i");
-                
+                Query q2=ss.createQuery("update PrimAcc set paccBal=paccBal+ :q where paccId=:j");
                 q.setParameter("p",z);
                 q.setParameter("i",pacc_id);
+                q2.setParameter("q",trans_Amt);
+                q2.setParameter("j",acc_toacc);
                 q.executeUpdate();
+                q2.executeUpdate();
                 tx.commit();
                 ss.close();   
                 
